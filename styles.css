@@ -44,6 +44,7 @@ h1 {
 .fakeIframe {
     width: 560px;
     height: 315px;
+    background-image: url("thumbnail.png");
     border: 2px solid #ccc;
     cursor: pointer;
   }
