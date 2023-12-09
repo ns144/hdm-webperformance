@@ -41,7 +41,7 @@ h1 {
     background-color: #782345;
 }
 
-.fakeIframe {
+#fakeIframe {
     width: 560px;
     height: 315px;
     background-image: url("thumbnail.png");
