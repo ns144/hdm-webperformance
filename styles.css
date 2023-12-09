@@ -45,6 +45,7 @@ h1 {
     width: 560px;
     height: 315px;
     background-image: url("thumbnail.png");
+    background-size: contain;
     border: 2px solid #ccc;
     cursor: pointer;
   }
