@@ -39,7 +39,34 @@
 		<img loading=lazy src="https://source.unsplash.com/random/400x300?16" />
 		<img loading=lazy src="https://source.unsplash.com/random/400x300?17" />
 	</div>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/4QkuvwRftTw" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading=lazy></iframe>
+	<div id="realIframeContainer"></div>
+
+ 	<div id="fakeIframe" class="fake-iframe" onclick="replaceWithRealIframe()">
+ 	  Click me to show real iframe!
+ 	</div>
+ 	
+ 	<script>
+ 	  function replaceWithRealIframe() {
+ 	    var fakeIframe = document.getElementById('fakeIframe');
+ 	    var realIframeContainer = document.getElementById('realIframeContainer');
+	
+ 	    // Check if the real iframe has already been created
+ 	    if (!realIframeContainer.hasChildNodes()) {
+ 	      var realIframe = document.createElement('iframe');
+ 	      realIframe.width = 560;
+ 	      realIframe.height = 315;
+ 	      realIframe.src = 'https://www.youtube.com/embed/4QkuvwRftTw';
+ 	      realIframe.title = 'YouTube Video';
+ 	      realIframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+ 	      realIframe.allowFullscreen = true;
+ 	      realIframe.loading = 'lazy';
+		
+ 	      realIframeContainer.appendChild(realIframe);
+ 	    }
+	 
+ 	    fakeIframe.style.display = 'none'; // Hide fake iframe
+ 	  }
+ 	</script>
 	<!-- Google Analytics -->
 	<script>
 		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
